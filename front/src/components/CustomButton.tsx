@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, PressableProps, Dimensions} from 'react-native';
+import {Pressable, StyleSheet, Text, PressableProps, Dimensions, TouchableOpacity} from 'react-native';
 import { colors } from '../constants';
 
 interface CustomButtonProps extends PressableProps {
