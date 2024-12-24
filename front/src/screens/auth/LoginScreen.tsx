@@ -1,47 +1,47 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, View, Text} from 'react-native';
 import InputField from '../../components/InputField';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import CustomButton from '../../components/CustomButton';
 import useForm from '../../hooks/useForm';
-import { validateLogin } from '../../utils';
+import {validateLogin} from '../../utils';
 
 function LoginScreen() {
   const login = useForm({
     initialValue: {email: '', password: ''},
     validate: validateLogin,
-  })
- 
+  });
+
   const handleSubmit = () => {
     console.log('values', login.values);
-  }
+  };
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.inputContainter}>
-        <InputField 
-          placeholder='이메일' 
-          error={login.errors.email} 
+        <InputField
+          placeholder="이메일"
+          error={login.errors.email}
           touched={login.touched.email}
-          inputMode='email'
+          inputMode="email"
           {...login.getTextInputProps('email')}
         />
-        <InputField 
-          placeholder='비밀번호'
+        <InputField
+          placeholder="비밀번호"
           error={login.errors.password}
-          touched={login.touched.password} 
+          touched={login.touched.password}
           secureTextEntry
           {...login.getTextInputProps('password')}
         />
       </View>
-      <CustomButton 
-        label='로그인'
-        variant='filled'
-        size='large'
+      <CustomButton
+        label="로그인"
+        variant="filled"
+        size="large"
         onPress={handleSubmit}
       />
     </SafeAreaView>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   inputContainter: {
     gap: 20,
     marginBottom: 30,
-  }
+  },
 });
 
 export default LoginScreen;
