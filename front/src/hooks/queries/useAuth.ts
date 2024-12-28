@@ -14,7 +14,7 @@ import {removeEncryptedStorage, setEncryptedStorage} from '../../utils';
 import {removeHeader, setHeader} from '../../utils/header';
 import {useEffect} from 'react';
 import queryClient from '../../api/queryClient';
-import {queryKeys} from '../../constants';
+import {queryKeys, storageKeys} from '../../constants';
 
 function useSignup(mutationOptions?: UseMutationCustomOptions) {
   return useMutation({
@@ -28,7 +28,7 @@ function useLogin(mutationOptions?: UseMutationCustomOptions) {
     mutationFn: postLogin,
     onSuccess: ({accessToken, refreshToken}) => {
       setHeader('Authorization', `Bearer ${accessToken}`);
-      setEncryptedStorage('refreshToken', refreshToken);
+      setEncryptedStorage(storageKeys.REFRESH_TOKEN, refreshToken);
     },
     onSettled: () => {
       queryClient.refetchQueries({
@@ -55,14 +55,14 @@ function useGetRefreshToken() {
   useEffect(() => {
     if (isSuccess) {
       setHeader('Authorization', `Bearer ${data.accessToken}`);
-      setEncryptedStorage('refreshToken', data.refreshToken);
+      setEncryptedStorage(storageKeys.REFRESH_TOKEN, data.refreshToken);
     }
   }, [isSuccess]);
 
   useEffect(() => {
     if (isError) {
       removeHeader('Authorization');
-      removeEncryptedStorage('refreshToken');
+      removeEncryptedStorage(storageKeys.REFRESH_TOKEN);
     }
   }, [isError]);
 
@@ -82,7 +82,7 @@ function useLogout(mutationOptions?: UseMutationCustomOptions) {
     mutationFn: logout,
     onSuccess: () => {
       removeHeader('Authorization');
-      removeEncryptedStorage('refreshToken');
+      removeEncryptedStorage(storageKeys.REFRESH_TOKEN);
     },
     onSettled: () => {
       queryClient.invalidateQueries({queryKey: [queryKeys.AUTH]});
