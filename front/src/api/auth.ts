@@ -12,7 +12,6 @@ const postSignup = async ({email, password}: RequestUser): Promise<void> => {
     email,
     password,
   });
-
   return data;
 };
 
@@ -40,8 +39,9 @@ const getProfile = async (): Promise<ResponseProfile> => {
 };
 
 const getAccessToken = async (): Promise<ResponseToken> => {
-  const refreshToken = getEncryptedStorage('refreshToken');
-  const {data} = await axiosInstance.post('/auth/refresh', {
+  const refreshToken = await getEncryptedStorage('refreshToken');
+
+  const {data} = await axiosInstance.get('/auth/refresh', {
     headers: {
       Authorization: `Bearer ${refreshToken}`,
     },

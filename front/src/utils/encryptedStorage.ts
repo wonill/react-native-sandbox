@@ -6,7 +6,6 @@ const setEncryptedStorage = async <T>(key: string, data: T) => {
 
 const getEncryptedStorage = async (key: string) => {
   const storedData = await EncryptedStorage.getItem(key);
-
   return storedData ? JSON.parse(storedData) : null;
 };
 
