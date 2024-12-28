@@ -14,6 +14,7 @@ import {removeEncryptedStorage, setEncryptedStorage} from '../../utils';
 import {removeHeader, setHeader} from '../../utils/header';
 import {useEffect} from 'react';
 import queryClient from '../../api/queryClient';
+import {queryKeys} from '../../constants';
 
 function useSignup(mutationOptions?: UseMutationCustomOptions) {
   return useMutation({
@@ -30,8 +31,12 @@ function useLogin(mutationOptions?: UseMutationCustomOptions) {
       setEncryptedStorage('refreshToken', refreshToken);
     },
     onSettled: () => {
-      queryClient.refetchQueries({queryKey: ['auth', 'getAccessToken']});
-      queryClient.invalidateQueries({queryKey: ['auth', 'getProfile']});
+      queryClient.refetchQueries({
+        queryKey: [queryKeys.AUTH, queryKeys.GET_ACCESS_TOKEN],
+      });
+      queryClient.invalidateQueries({
+        queryKey: [queryKeys.AUTH, queryKeys.GET_PROFILE],
+      });
     },
     ...mutationOptions,
   });
@@ -39,7 +44,7 @@ function useLogin(mutationOptions?: UseMutationCustomOptions) {
 
 function useGetRefreshToken() {
   const {isSuccess, data, isError} = useQuery({
-    queryKey: ['auth', 'getAccessToken'],
+    queryKey: [queryKeys.AUTH, queryKeys.GET_ACCESS_TOKEN],
     queryFn: getAccessToken,
     staleTime: 1000 * 60 * 27,
     refetchInterval: 1000 * 60 * 27,
@@ -67,7 +72,7 @@ function useGetRefreshToken() {
 function useGetProfile(queryOptions?: UseQueryCustomOptions) {
   return useQuery({
     queryFn: getProfile,
-    queryKey: ['auth', 'getProfile'],
+    queryKey: [queryKeys.AUTH, queryKeys.GET_PROFILE],
     ...queryOptions,
   });
 }
@@ -80,7 +85,7 @@ function useLogout(mutationOptions?: UseMutationCustomOptions) {
       removeEncryptedStorage('refreshToken');
     },
     onSettled: () => {
-      queryClient.invalidateQueries({queryKey: ['auth']});
+      queryClient.invalidateQueries({queryKey: [queryKeys.AUTH]});
     },
     ...mutationOptions,
   });
