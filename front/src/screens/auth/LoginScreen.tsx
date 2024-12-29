@@ -1,28 +1,28 @@
-import React, {useRef, useState} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import React, {useRef} from 'react';
+import {SafeAreaView, StyleSheet, TextInput, View} from 'react-native';
+
 import InputField from '~/components/InputField';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import CustomButton from '~/components/CustomButton';
 import useForm from '~/hooks/useForm';
-import {validateLogin} from '~/utils';
-import {TextInput} from 'react-native-gesture-handler';
 import useAuth from '~/hooks/queries/useAuth';
+import {validateLogin} from '~/utils';
 
 function LoginScreen() {
-  const passwordRef = useRef<TextInput | null>(null);
   const {loginMutation} = useAuth();
+  const passwordRef = useRef<TextInput | null>(null);
   const login = useForm({
     initialValue: {email: '', password: ''},
     validate: validateLogin,
   });
 
   const handleSubmit = () => {
+    console.log('login.values', login.values);
     loginMutation.mutate(login.values);
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.inputContainter}>
+      <View style={styles.inputContainer}>
         <InputField
           autoFocus
           placeholder="이메일"
@@ -37,12 +37,10 @@ function LoginScreen() {
         <InputField
           ref={passwordRef}
           placeholder="비밀번호"
-          textContentType="oneTimeCode"
           error={login.errors.password}
           touched={login.touched.password}
           secureTextEntry
           returnKeyType="join"
-          blurOnSubmit={false}
           onSubmitEditing={handleSubmit}
           {...login.getTextInputProps('password')}
         />
@@ -62,7 +60,7 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 30,
   },
-  inputContainter: {
+  inputContainer: {
     gap: 20,
     marginBottom: 30,
   },

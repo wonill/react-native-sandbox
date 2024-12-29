@@ -1,4 +1,4 @@
-import React, {ForwardedRef, forwardRef, useRef} from 'react';
+import React, {ForwardedRef, forwardRef, useEffect, useRef} from 'react';
 import {
   Dimensions,
   StyleSheet,
@@ -29,6 +29,10 @@ const InputField = forwardRef(
     const handlePressInput = () => {
       innerRef.current?.focus();
     };
+
+    useEffect(() => {
+      console.log('...props : ', props);
+    }, []);
 
     return (
       <Pressable onPress={handlePressInput}>

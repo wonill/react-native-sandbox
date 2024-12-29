@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState, useCallback, useMemo} from 'react';
 
 interface useFormProps<T> {
-  initialValue : T;
-  validate: (values: T) => Record<string, string>
+  initialValue: T;
+  validate: (values: T) => Record<string, string>;
 }
 
 function useForm<T>({initialValue, validate}: useFormProps<T>) {
@@ -10,32 +10,35 @@ function useForm<T>({initialValue, validate}: useFormProps<T>) {
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleChangeValues = (name: keyof T, text: string) => {
-    setValues({
-      ...values,
+  const handleChangeValues = useCallback((name: keyof T, text: string) => {
+    setValues(prevValues => ({
+      ...prevValues,
       [name]: text,
-    })
-  }
+    }));
+  }, []);
 
-  const handleBlur = (name: keyof T) => {
-    setTouched({
-      ...touched,
-      [name] : true,
-    })
-  }
+  const handleBlur = useCallback((name: keyof T) => {
+    setTouched(prevTouched => ({
+      ...prevTouched,
+      [name]: true,
+    }));
+  }, []);
 
   useEffect(() => {
     const newError = validate(values);
     setErrors(newError);
-  },[values])
+  }, [values, validate]);
 
-  const getTextInputProps = (name: keyof T) => {
-    const value = values[name];
-    const onChangeText = (text: string) => handleChangeValues(name, text);
-    const onBlur = () => handleBlur(name);
+  const getTextInputProps = useMemo(
+    () => (name: keyof T) => {
+      const value = values[name];
+      const onChangeText = (text: string) => handleChangeValues(name, text);
+      const onBlur = () => handleBlur(name);
 
-    return {value, onChangeText, onBlur};
-  }
+      return {value, onChangeText, onBlur};
+    },
+    [values, handleChangeValues, handleBlur],
+  );
 
   return {values, errors, touched, getTextInputProps};
 }
