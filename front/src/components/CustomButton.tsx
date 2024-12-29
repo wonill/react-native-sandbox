@@ -1,78 +1,95 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, PressableProps, Dimensions, TouchableOpacity, View} from 'react-native';
-import { colors } from '../constants';
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  PressableProps,
+  Dimensions,
+  View,
+} from 'react-native';
+import {colors} from '~/constants';
 
 interface CustomButtonProps extends PressableProps {
-    label: string;
-    variant?: "filled" | "outlined";
-    size?: 'large' | 'medium';
-    invalid? : boolean;
+  label: string;
+  variant?: 'filled' | 'outlined';
+  size?: 'large' | 'medium';
+  invalid?: boolean;
 }
 
 const deviceHeight = Dimensions.get('screen').height;
 
-function CustomButton({label, variant = 'filled', size='large', invalid = false, ...props}: CustomButtonProps) {
-
+function CustomButton({
+  label,
+  variant = 'filled',
+  size = 'large',
+  invalid = false,
+  ...props
+}: CustomButtonProps) {
   return (
     <Pressable
-    disabled={invalid} style={({pressed}) => [styles.container, pressed ? styles[`${variant}Pressed`] : styles[variant], invalid && styles.invalid]}
-        {...props}>
-        <View style={styles[size]}>
-            <Text style={[styles.text, styles[`${variant}Text`]]}>{label}</Text>
-        </View>
+      disabled={invalid}
+      style={({pressed}) => [
+        styles.container,
+        pressed ? styles[`${variant}Pressed`] : styles[variant],
+        invalid && styles.invalid,
+      ]}
+      {...props}>
+      <View style={styles[size]}>
+        <Text style={[styles.text, styles[`${variant}Text`]]}>{label}</Text>
+      </View>
     </Pressable>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        borderRadius: 3,
-        flexDirection: 'row',
-        justifyContent: 'center',
-    },
+  container: {
+    borderRadius: 3,
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
 
-    invalid: {
-        opacity: 0.5,
-    },
+  invalid: {
+    opacity: 0.5,
+  },
 
-    filled: {
-        backgroundColor: colors.PINK_700,
-    },
-    outlined: {
-        borderColor: colors.PINK_700,
-        borderWidth: 1,
-    },
+  filled: {
+    backgroundColor: colors.PINK_700,
+  },
+  outlined: {
+    borderColor: colors.PINK_700,
+    borderWidth: 1,
+  },
 
-    filledPressed: {
-        backgroundColor: colors.PINK_500,
-    },
-    outlinedPressed: {
-        borderColor: colors.PINK_700,
-        borderWidth: 1,
-        opacity: 0.5,
-    },
+  filledPressed: {
+    backgroundColor: colors.PINK_500,
+  },
+  outlinedPressed: {
+    borderColor: colors.PINK_700,
+    borderWidth: 1,
+    opacity: 0.5,
+  },
 
-    large: {
-        width: '100%',
-        paddingVertical: deviceHeight > 700 ? 15 : 10,
-        alignItems: 'center',
-    },
-    medium: {
-        width: '50%',
-        paddingVertical: deviceHeight > 700 ? 12 : 8,
-        alignItems: 'center',
-    },
+  large: {
+    width: '100%',
+    paddingVertical: deviceHeight > 700 ? 15 : 10,
+    alignItems: 'center',
+  },
+  medium: {
+    width: '50%',
+    paddingVertical: deviceHeight > 700 ? 12 : 8,
+    alignItems: 'center',
+  },
 
-    text: {
-        fontSize: 16,
-        fontWeight: '700',
-    },
-    filledText: {
-        color: colors.WHITE,
-    },
-    outlinedText: {
-        color: colors.PINK_700
-    },
+  text: {
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  filledText: {
+    color: colors.WHITE,
+  },
+  outlinedText: {
+    color: colors.PINK_700,
+  },
 });
 
 export default CustomButton;
