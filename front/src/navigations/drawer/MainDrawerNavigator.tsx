@@ -8,7 +8,10 @@ const Drawer = createDrawerNavigator();
 
 function MainDrawerNavigator() {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+      screenOptions={{
+        drawerType: 'front',
+      }}>
       <Drawer.Screen
         name="MapHome"
         component={MapStackNavigator}
