@@ -1,7 +1,7 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import useAuth from '~/hooks/queries/useAuth';
-import MapView, {LatLng, PROVIDER_GOOGLE} from 'react-native-maps';
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {CompositeNavigationProp, useNavigation} from '@react-navigation/native';
 import {colors} from '~/constants';
@@ -9,7 +9,7 @@ import {MapStackParamList} from '~/navigations/stack/MapStackNavigator';
 import {DrawerNavigationProp} from '@react-navigation/drawer';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {MainDrawerParamList} from '~/navigations/drawer/MainDrawerNavigator';
-import Geolocation from '@react-native-community/geolocation';
+import useUserLocation from '~/hooks/useUserLocation';
 
 type Navigation = CompositeNavigationProp<
   StackNavigationProp<MapStackParamList>,
@@ -20,9 +20,8 @@ function MapHomeScreen() {
   const inset = useSafeAreaInsets();
   const {logoutMutation} = useAuth();
   const navigation = useNavigation<Navigation>();
-  const [userLocation, setUserLocation] = useState<LatLng>();
-  const [isUserLocationError, setIsUserLocationError] = useState(false);
   const mapRef = useRef<MapView | null>(null);
+  const {userLocation, isUserLocationError} = useUserLocation();
 
   const handleLogout = () => {
     logoutMutation.mutate(null);
@@ -33,23 +32,13 @@ function MapHomeScreen() {
       // 에러메세지 표시
       return;
     }
+    mapRef.current?.animateToRegion({
+      latitude: userLocation?.latitude,
+      longitude: userLocation?.longitude,
+      latitudeDelta: 0.0922,
+      longitudeDelta: 0.0421,
+    });
   };
-
-  useEffect(() => {
-    Geolocation.getCurrentPosition(
-      info => {
-        const {latitude, longitude} = info.coords;
-        setUserLocation({latitude, longitude});
-        setIsUserLocationError(false);
-      },
-      () => {
-        setIsUserLocationError(true);
-      },
-      {
-        enableHighAccuracy: true,
-      },
-    );
-  }, []);
 
   return (
     <>
@@ -67,7 +56,7 @@ function MapHomeScreen() {
         <Text>서랍</Text>
       </Pressable>
       <View style={styles.buttonList}>
-        <Pressable style={styles.mapButton}>
+        <Pressable style={styles.mapButton} onPress={handlePressUserLocation}>
           <Text>내 위치</Text>
         </Pressable>
       </View>
