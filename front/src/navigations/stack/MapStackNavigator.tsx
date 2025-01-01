@@ -1,14 +1,14 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import AuthHomeScreen from '~/screens/auth/AuthHomeScreen';
-import LoginScreen from '~/screens/auth/LoginScreen';
-import {authNavigations, mapNavigations} from '~/constants';
-import SignupScreen from '~/screens/auth/SignupScreen';
+import {StyleSheet} from 'react-native';
+import {mapNavigations} from '~/constants';
 import MapHomeScreen from '~/screens/map/MapHomeScreen';
+import AddPostScreen from '~/screens/map/AddPostScreen';
+import {LatLng} from 'react-native-maps';
 
 export type MapStackParamList = {
   [mapNavigations.MAP_HOME]: undefined;
+  [mapNavigations.ADD_POST]: {location: LatLng};
 };
 
 const Stack = createStackNavigator<MapStackParamList>();
@@ -35,6 +35,13 @@ function MapStackNavigator() {
         options={{
           headerTitle: '',
           headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={mapNavigations.ADD_POST}
+        component={AddPostScreen}
+        options={{
+          headerTitle: '장소 추가',
         }}
       />
     </Stack.Navigator>
