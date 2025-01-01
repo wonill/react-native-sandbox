@@ -1,10 +1,19 @@
 import {NavigationContainer} from '@react-navigation/native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import RootNavigator from './src/navigations/root/RootNavigator';
 import {QueryClientProvider} from '@tanstack/react-query';
 import queryClient from './src/api/queryClient';
+import {setCustomText} from 'react-native-global-props';
 
 function App(): React.JSX.Element {
+  useEffect(() => {
+    const customTextProps = {
+      style: {
+        fontFamily: 'SUIT-Regular',
+      },
+    };
+    setCustomText(customTextProps);
+  }, []);
   return (
     <QueryClientProvider client={queryClient}>
       <NavigationContainer>

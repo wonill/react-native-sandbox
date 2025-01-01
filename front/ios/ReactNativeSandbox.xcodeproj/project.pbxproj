@@ -11,10 +11,20 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3C1D8F8DD85B48938A2C9DB8 /* SUIT-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E2EB26F0F47DD8B768C38 /* SUIT-Thin.otf */; };
+		46D738040AB24CEEA5EDA98F /* SUIT-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02F667C10B4F497398706497 /* SUIT-ExtraLight.otf */; };
 		5BB8FDDAB13252FEAB4DEB5A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		60BAD57420FF4792B080B58E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 40409166393C482490DFB8DD /* LICENSE */; };
+		65FC59506C834B7BB6A3A114 /* SUIT-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC0A20EB6F704A93B5635CF7 /* SUIT-Light.otf */; };
+		800B539C22484F70A2E919D3 /* SUIT-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8A0D4AD7882147929DB14F5A /* SUIT-SemiBold.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8CC495D4565B67F7AAE03892 /* libPods-ReactNativeSandbox-ReactNativeSandboxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E7E0AB23AD32CBE5B749CF /* libPods-ReactNativeSandbox-ReactNativeSandboxTests.a */; };
+		915E82B0B9E14B328A733397 /* SUIT-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AF939C36F2149AAB7809B5A /* SUIT-ExtraBold.otf */; };
+		A66ABB4938964206B80FE191 /* SUIT-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 287F0E4D808746D899C51D34 /* SUIT-Heavy.otf */; };
+		BCC1F6F6CAD94156AAF252BF /* SUIT-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B860491795D249D99B8794A0 /* SUIT-Bold.otf */; };
 		BDA9BDAF7313A865BAB498D0 /* libPods-ReactNativeSandbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A3FB7B14C87921BA779111 /* libPods-ReactNativeSandbox.a */; };
+		EAC1F4D70BE141549E5E74C5 /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 662E94152B294D73BB838F86 /* SUIT-Regular.otf */; };
+		EB59BD9D05894D3AB491DE8A /* SUIT-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51CC502095C94E3DAC29D77B /* SUIT-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +41,7 @@
 		00E356EE1AD99517003FC87E /* ReactNativeSandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeSandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ReactNativeSandboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeSandboxTests.m; sourceTree = "<group>"; };
+		02F667C10B4F497398706497 /* SUIT-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-ExtraLight.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-ExtraLight.otf"; sourceTree = "<group>"; };
 		08E7E0AB23AD32CBE5B749CF /* libPods-ReactNativeSandbox-ReactNativeSandboxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeSandbox-ReactNativeSandboxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A3FB7B14C87921BA779111 /* libPods-ReactNativeSandbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeSandbox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* ReactNativeSandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeSandbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +52,10 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeSandbox/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = ReactNativeSandbox/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		254B6B6695C8623E09EA6C9E /* Pods-ReactNativeSandbox-ReactNativeSandboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSandbox-ReactNativeSandboxTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeSandbox-ReactNativeSandboxTests/Pods-ReactNativeSandbox-ReactNativeSandboxTests.release.xcconfig"; sourceTree = "<group>"; };
+		287F0E4D808746D899C51D34 /* SUIT-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-Heavy.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-Heavy.otf"; sourceTree = "<group>"; };
+		3AF939C36F2149AAB7809B5A /* SUIT-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-ExtraBold.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-ExtraBold.otf"; sourceTree = "<group>"; };
+		40409166393C482490DFB8DD /* LICENSE */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LICENSE; path = "../src/assets/fonts/SUIT-otf/LICENSE"; sourceTree = "<group>"; };
+		51CC502095C94E3DAC29D77B /* SUIT-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-Medium.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-Medium.otf"; sourceTree = "<group>"; };
 		5713563E2D3B1BD300B22BF1 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		57E3D9BC2D3B1D1D008239C1 /* CartesianPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianPoint.swift; sourceTree = "<group>"; };
 		57E3D9BD2D3B1D1D008239C1 /* LatLngRadians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLngRadians.swift; sourceTree = "<group>"; };
@@ -67,9 +82,14 @@
 		57E3D9D82D3B1E3B008239C1 /* GMSPolyline+GeometryUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSPolyline+GeometryUtils.swift"; sourceTree = "<group>"; };
 		57E3D9D92D3B1E3B008239C1 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		57E3D9DA2D3B1E3B008239C1 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		662E94152B294D73BB838F86 /* SUIT-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-Regular.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-Regular.otf"; sourceTree = "<group>"; };
+		7F0E2EB26F0F47DD8B768C38 /* SUIT-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-Thin.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-Thin.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeSandbox/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A0D4AD7882147929DB14F5A /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-SemiBold.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-SemiBold.otf"; sourceTree = "<group>"; };
 		93A759EAA8F8B005356A6964 /* Pods-ReactNativeSandbox-ReactNativeSandboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSandbox-ReactNativeSandboxTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeSandbox-ReactNativeSandboxTests/Pods-ReactNativeSandbox-ReactNativeSandboxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9721F71DF7E6FB7B6832ACD /* Pods-ReactNativeSandbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSandbox.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeSandbox/Pods-ReactNativeSandbox.release.xcconfig"; sourceTree = "<group>"; };
+		AC0A20EB6F704A93B5635CF7 /* SUIT-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-Light.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-Light.otf"; sourceTree = "<group>"; };
+		B860491795D249D99B8794A0 /* SUIT-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-Bold.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-Bold.otf"; sourceTree = "<group>"; };
 		E789B5620EB9D8DCEEF1E66C /* Pods-ReactNativeSandbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSandbox.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeSandbox/Pods-ReactNativeSandbox.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -138,6 +158,24 @@
 				08E7E0AB23AD32CBE5B749CF /* libPods-ReactNativeSandbox-ReactNativeSandboxTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		517CA26820384268897236C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B860491795D249D99B8794A0 /* SUIT-Bold.otf */,
+				3AF939C36F2149AAB7809B5A /* SUIT-ExtraBold.otf */,
+				02F667C10B4F497398706497 /* SUIT-ExtraLight.otf */,
+				287F0E4D808746D899C51D34 /* SUIT-Heavy.otf */,
+				AC0A20EB6F704A93B5635CF7 /* SUIT-Light.otf */,
+				51CC502095C94E3DAC29D77B /* SUIT-Medium.otf */,
+				662E94152B294D73BB838F86 /* SUIT-Regular.otf */,
+				8A0D4AD7882147929DB14F5A /* SUIT-SemiBold.otf */,
+				7F0E2EB26F0F47DD8B768C38 /* SUIT-Thin.otf */,
+				40409166393C482490DFB8DD /* LICENSE */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		57E3D9BE2D3B1D1D008239C1 /* Internal */ = {
@@ -228,6 +266,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				517CA26820384268897236C6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -350,6 +389,16 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				5BB8FDDAB13252FEAB4DEB5A /* PrivacyInfo.xcprivacy in Resources */,
+				BCC1F6F6CAD94156AAF252BF /* SUIT-Bold.otf in Resources */,
+				915E82B0B9E14B328A733397 /* SUIT-ExtraBold.otf in Resources */,
+				46D738040AB24CEEA5EDA98F /* SUIT-ExtraLight.otf in Resources */,
+				A66ABB4938964206B80FE191 /* SUIT-Heavy.otf in Resources */,
+				65FC59506C834B7BB6A3A114 /* SUIT-Light.otf in Resources */,
+				EB59BD9D05894D3AB491DE8A /* SUIT-Medium.otf in Resources */,
+				EAC1F4D70BE141549E5E74C5 /* SUIT-Regular.otf in Resources */,
+				800B539C22484F70A2E919D3 /* SUIT-SemiBold.otf in Resources */,
+				3C1D8F8DD85B48938A2C9DB8 /* SUIT-Thin.otf in Resources */,
+				60BAD57420FF4792B080B58E /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +756,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -776,7 +828,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
