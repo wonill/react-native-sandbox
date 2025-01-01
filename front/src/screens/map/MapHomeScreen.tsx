@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import useAuth from '~/hooks/queries/useAuth';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
@@ -31,7 +31,8 @@ function MapHomeScreen() {
 
   const handlePressUserLocation = () => {
     if (isUserLocationError) {
-      // 에러메세지 표시
+      console.log('권한 없어서 안돼');
+      // usePermission('LOCATION');
       return;
     }
     mapRef.current?.animateToRegion({
@@ -55,11 +56,14 @@ function MapHomeScreen() {
       <Pressable
         style={[styles.drawerButton, {top: inset.top || 20}]}
         onPress={() => navigation.openDrawer()}>
-        <Text>서랍</Text>
+        <Image source={require('~/assets/menu.png')} />
       </Pressable>
       <View style={styles.buttonList}>
         <Pressable style={styles.mapButton} onPress={handlePressUserLocation}>
-          <Text>내 위치</Text>
+          <Image
+            source={require('~/assets/my-location.png')}
+            resizeMode="contain"
+          />
         </Pressable>
       </View>
     </>

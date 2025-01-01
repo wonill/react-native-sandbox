@@ -34,7 +34,6 @@ function usePermission(type: PermissionType) {
         : iosPermission[type];
 
       const checked = await check(permissionOS);
-      console.log('checked : ', checked);
 
       const showPermissionAlert = () => {
         Alert.alert(
