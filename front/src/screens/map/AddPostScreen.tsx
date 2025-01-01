@@ -3,6 +3,7 @@ import React from 'react';
 import {StyleSheet, Text, View, Pressable} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import CustomText from '~/components/CustomText';
 import InputField from '~/components/InputField';
 import {mapNavigations} from '~/constants';
 import {MapStackParamList} from '~/navigations/stack/MapStackNavigator';

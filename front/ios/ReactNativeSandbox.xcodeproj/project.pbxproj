@@ -25,6 +25,14 @@
 		BDA9BDAF7313A865BAB498D0 /* libPods-ReactNativeSandbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A3FB7B14C87921BA779111 /* libPods-ReactNativeSandbox.a */; };
 		EAC1F4D70BE141549E5E74C5 /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 662E94152B294D73BB838F86 /* SUIT-Regular.otf */; };
 		EB59BD9D05894D3AB491DE8A /* SUIT-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51CC502095C94E3DAC29D77B /* SUIT-Medium.otf */; };
+		074BACCA15B04D358A2C6FEC /* ClimateCrisisKR-1979.otf in Resources */ = {isa = PBXBuildFile; fileRef = 16D99C6F47C248D5BBE4DA51 /* ClimateCrisisKR-1979.otf */; };
+		9E4EB234EA454FE48A76EB86 /* ClimateCrisisKR-1990.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB533DA003548C7B162227D /* ClimateCrisisKR-1990.otf */; };
+		AEA0902812254EE79F603765 /* ClimateCrisisKR-2000.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF2C6862B741F2BFB3BE8D /* ClimateCrisisKR-2000.otf */; };
+		5AF72AEECD7D4507B7A29BE6 /* ClimateCrisisKR-2010.otf in Resources */ = {isa = PBXBuildFile; fileRef = 633BE578DE114031AC8A8C42 /* ClimateCrisisKR-2010.otf */; };
+		5E404118CD15466A85186029 /* ClimateCrisisKR-2019.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4AC0C42F7D2847D3A1B7863C /* ClimateCrisisKR-2019.otf */; };
+		F6B245FA83FD4ACBAE44C097 /* ClimateCrisisKR-2030.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1459617C44A3186067B01 /* ClimateCrisisKR-2030.otf */; };
+		57B58C72AD0F45838D725D99 /* ClimateCrisisKR-2040.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA6E051BC5646809757E5DE /* ClimateCrisisKR-2040.otf */; };
+		F61C7C75A3FF40D9AF261B30 /* ClimateCrisisKR-2050.otf in Resources */ = {isa = PBXBuildFile; fileRef = F52D6279A4EC4655B4339C81 /* ClimateCrisisKR-2050.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +100,14 @@
 		B860491795D249D99B8794A0 /* SUIT-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SUIT-Bold.otf"; path = "../src/assets/fonts/SUIT-otf/SUIT-Bold.otf"; sourceTree = "<group>"; };
 		E789B5620EB9D8DCEEF1E66C /* Pods-ReactNativeSandbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSandbox.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeSandbox/Pods-ReactNativeSandbox.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		16D99C6F47C248D5BBE4DA51 /* ClimateCrisisKR-1979.otf */ = {isa = PBXFileReference; name = "ClimateCrisisKR-1979.otf"; path = "../src/assets/fonts/otf/ClimateCrisisKR-1979.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6BB533DA003548C7B162227D /* ClimateCrisisKR-1990.otf */ = {isa = PBXFileReference; name = "ClimateCrisisKR-1990.otf"; path = "../src/assets/fonts/otf/ClimateCrisisKR-1990.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		73AF2C6862B741F2BFB3BE8D /* ClimateCrisisKR-2000.otf */ = {isa = PBXFileReference; name = "ClimateCrisisKR-2000.otf"; path = "../src/assets/fonts/otf/ClimateCrisisKR-2000.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		633BE578DE114031AC8A8C42 /* ClimateCrisisKR-2010.otf */ = {isa = PBXFileReference; name = "ClimateCrisisKR-2010.otf"; path = "../src/assets/fonts/otf/ClimateCrisisKR-2010.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4AC0C42F7D2847D3A1B7863C /* ClimateCrisisKR-2019.otf */ = {isa = PBXFileReference; name = "ClimateCrisisKR-2019.otf"; path = "../src/assets/fonts/otf/ClimateCrisisKR-2019.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6EC1459617C44A3186067B01 /* ClimateCrisisKR-2030.otf */ = {isa = PBXFileReference; name = "ClimateCrisisKR-2030.otf"; path = "../src/assets/fonts/otf/ClimateCrisisKR-2030.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2FA6E051BC5646809757E5DE /* ClimateCrisisKR-2040.otf */ = {isa = PBXFileReference; name = "ClimateCrisisKR-2040.otf"; path = "../src/assets/fonts/otf/ClimateCrisisKR-2040.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F52D6279A4EC4655B4339C81 /* ClimateCrisisKR-2050.otf */ = {isa = PBXFileReference; name = "ClimateCrisisKR-2050.otf"; path = "../src/assets/fonts/otf/ClimateCrisisKR-2050.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +189,14 @@
 				8A0D4AD7882147929DB14F5A /* SUIT-SemiBold.otf */,
 				7F0E2EB26F0F47DD8B768C38 /* SUIT-Thin.otf */,
 				40409166393C482490DFB8DD /* LICENSE */,
+				16D99C6F47C248D5BBE4DA51 /* ClimateCrisisKR-1979.otf */,
+				6BB533DA003548C7B162227D /* ClimateCrisisKR-1990.otf */,
+				73AF2C6862B741F2BFB3BE8D /* ClimateCrisisKR-2000.otf */,
+				633BE578DE114031AC8A8C42 /* ClimateCrisisKR-2010.otf */,
+				4AC0C42F7D2847D3A1B7863C /* ClimateCrisisKR-2019.otf */,
+				6EC1459617C44A3186067B01 /* ClimateCrisisKR-2030.otf */,
+				2FA6E051BC5646809757E5DE /* ClimateCrisisKR-2040.otf */,
+				F52D6279A4EC4655B4339C81 /* ClimateCrisisKR-2050.otf */,
 			);
 			name = Resources;
 			path = "";
@@ -399,6 +423,14 @@
 				800B539C22484F70A2E919D3 /* SUIT-SemiBold.otf in Resources */,
 				3C1D8F8DD85B48938A2C9DB8 /* SUIT-Thin.otf in Resources */,
 				60BAD57420FF4792B080B58E /* LICENSE in Resources */,
+				074BACCA15B04D358A2C6FEC /* ClimateCrisisKR-1979.otf in Resources */,
+				9E4EB234EA454FE48A76EB86 /* ClimateCrisisKR-1990.otf in Resources */,
+				AEA0902812254EE79F603765 /* ClimateCrisisKR-2000.otf in Resources */,
+				5AF72AEECD7D4507B7A29BE6 /* ClimateCrisisKR-2010.otf in Resources */,
+				5E404118CD15466A85186029 /* ClimateCrisisKR-2019.otf in Resources */,
+				F6B245FA83FD4ACBAE44C097 /* ClimateCrisisKR-2030.otf in Resources */,
+				57B58C72AD0F45838D725D99 /* ClimateCrisisKR-2040.otf in Resources */,
+				F61C7C75A3FF40D9AF261B30 /* ClimateCrisisKR-2050.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,6 +40,38 @@
     {
       "path": "src/assets/fonts/SUIT-otf/SUIT-Thin.otf",
       "sha1": "8cb4f22e6e6312fe1dfa90c5cb47585d6c820cfe"
+    },
+    {
+      "path": "src/assets/fonts/otf/ClimateCrisisKR-1979.otf",
+      "sha1": "609b1ebf41678b889dbf7aa523240fe0167dda42"
+    },
+    {
+      "path": "src/assets/fonts/otf/ClimateCrisisKR-1990.otf",
+      "sha1": "e0409620e8ee3150b8b84b508675e24f9d2a6c04"
+    },
+    {
+      "path": "src/assets/fonts/otf/ClimateCrisisKR-2000.otf",
+      "sha1": "f17c3a5a057d4b14d231708fbbd3a1fe00b6e584"
+    },
+    {
+      "path": "src/assets/fonts/otf/ClimateCrisisKR-2010.otf",
+      "sha1": "f5819affcdb99156b2596ec0f0c84491f4e5b12b"
+    },
+    {
+      "path": "src/assets/fonts/otf/ClimateCrisisKR-2019.otf",
+      "sha1": "1bbdea02a463dd74671d255a5964edebd7f5b196"
+    },
+    {
+      "path": "src/assets/fonts/otf/ClimateCrisisKR-2030.otf",
+      "sha1": "170d0b37bc479daba76eb2268a47a7bdec161bf2"
+    },
+    {
+      "path": "src/assets/fonts/otf/ClimateCrisisKR-2040.otf",
+      "sha1": "8b00262b96df5d818e0a453ec6086c2adf1183b7"
+    },
+    {
+      "path": "src/assets/fonts/otf/ClimateCrisisKR-2050.otf",
+      "sha1": "a75691e2df70819aa3c563e9cfc259e8a83f6219"
     }
   ]
 }
