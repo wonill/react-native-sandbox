@@ -10,7 +10,7 @@ function App(): React.JSX.Element {
     const customTextProps = {
       style: {
         // fontFamily: 'SUIT-Regular',
-        fontSize: 14,
+        // fontSize: 14,
       },
     };
     setCustomText(customTextProps);
