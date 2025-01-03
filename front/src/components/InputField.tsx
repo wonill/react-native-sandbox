@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 5,
   },
-  mutiLine: {
+  multiLine: {
     paddingBottom: deviceHeight > 700 ? 45 : 30,
   },
   input: {
