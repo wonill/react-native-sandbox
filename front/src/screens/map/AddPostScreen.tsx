@@ -1,8 +1,9 @@
 import {StackScreenProps} from '@react-navigation/stack';
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {StyleSheet, View, Image, TextInput} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import AddPostHeaderRight from '~/components/AddPostHeaderRight';
 import CustomButton from '~/components/CustomButton';
 import InputField from '~/components/InputField';
 import {mapNavigations} from '~/constants';
@@ -15,13 +16,21 @@ type AddPostScreenProps = StackScreenProps<
   typeof mapNavigations.ADD_POST
 >;
 
-function AddPostScreen({route}: AddPostScreenProps) {
+function AddPostScreen({route, navigation}: AddPostScreenProps) {
   const {location} = route.params;
   const descriptionRef = useRef<TextInput | null>(null);
   const addPost = useForm({
     initialValue: {title: '', description: ''},
     validate: validateAddPost,
   });
+
+  const handleSubmit = () => {};
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => AddPostHeaderRight(handleSubmit),
+    });
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
